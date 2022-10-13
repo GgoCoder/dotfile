@@ -8,7 +8,6 @@ local servers = {
 local function attach(_, buffer)
 	--go to definitions
 	vim.keymapping.bsmap(buffer, "n", "gd", "<cmd>Telescope lsp_definitions theme=dropdown<CR>", vim.keymapping.opts)
-	vim.keymapping.bsmap(buffer, "n", "<leader>ff", "<cmd>Telescope find_files<CR>", vim.keymapping.opts)
 end
 
 for server_name, server_option in pairs(servers) do

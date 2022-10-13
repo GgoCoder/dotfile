@@ -55,4 +55,27 @@ return require("packer").startup(function(use)
 	use {"windwp/windline.nvim",
 	config = function() require("config.windline") end}
 
+	--状态栏需要的插件，用于显示git信息
+	use{"lewis6991/gitsigns.nvim",
+	config = function() require("config.gitsigns")end}
+	-- bufferline
+	use {'akinsho/bufferline.nvim',
+	tag = "v2.*",
+	requires = 'kyazdani42/nvim-web-devicons',
+	config = function() require("config.bufferline")end}
+
+	-- which-key
+	use {"folke/which-key.nvim",
+	config = function() require("config.which-key")end}
+
+	-- hop 全局查找
+	use{"phaazon/hop.nvim",
+	branch = 'v2',
+	config = function()require("config.hop")end}
+
+	-- 终端插件
+	use{"akinsho/toggleterm.nvim",
+	tag = "*",
+	config = function()require("config.toggleterm")end}
+
 end)
