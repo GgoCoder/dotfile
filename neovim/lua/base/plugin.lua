@@ -12,7 +12,7 @@ return require("packer").startup(function(use)
 	use {'nvim-tree/nvim-tree.lua',
 	requires = {'nvim-tree/nvim-web-devicons'}, -- optional, for file icons 
 	tag = 'nightly',-- optional, updated every week. (see issue #1193)
-	config = function() require("config.nvim-tree") end} 
+	config = function() require("config.nvim-tree") end}
 
 	-- 代码颜色高亮
 	use {'nvim-treesitter/nvim-treesitter',
@@ -38,11 +38,11 @@ return require("packer").startup(function(use)
 	config = function() require("config.nvim-cmp")end}
 
 	--自动安装lsp服务
-	use {"williamboman/nvim-lsp-installer", 
+	use {"williamboman/nvim-lsp-installer",
 	config = function() require("config.nvim-lsp-installer") end}
-	
+
 	--- lsp 配置
-	use {"neovim/nvim-lspconfig", 
+	use {"neovim/nvim-lspconfig",
 	config = function() require("config.nvim-lspconfig")end}
 
 	-- telescope 
@@ -50,4 +50,9 @@ return require("packer").startup(function(use)
 	tag = '0.1.0',
 	requires = {{"nvim-lua/plenary.nvim"}},
 	config = function() require("config.telescope") end}
+
+	-- 状态栏
+	use {"windwp/windline.nvim",
+	config = function() require("config.windline") end}
+
 end)

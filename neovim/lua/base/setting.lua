@@ -19,5 +19,5 @@ vim.keymapping = {
 	dmap = vim.api.nvim_del_keymap,
 	bsmap = vim.api.nvim_buf_set_keymap,
 	bdmap = vim.api.nvim_buf_del_keymap,
-	opt = {noremap = true, silent = true}
+	opts = {noremap = true, silent = true}
 }
