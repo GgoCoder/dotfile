@@ -2,7 +2,7 @@ require("telescope").setup()
 -- find file
 vim.keymapping.smap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", vim.keymapping.opts)
 -- find word
-vim.keymapping.smap("n", "<leader>fw", "<cmd>Telescope liver_group<CR>", vim.keymapping.opts)
+vim.keymapping.smap("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", vim.keymapping.opts)
 -- oldfiles
 vim.keymapping.smap("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", vim.keymapping.opts)
 -- find help
