@@ -25,3 +25,5 @@ vim.keymapping.smap("n", "<A-k>", "<C-w>k", vim.keymapping.opts)
 vim.keymapping.smap("n", "<A-j>", "<C-w>j", vim.keymapping.opts)
 vim.keymapping.smap("n", "<A-h>", "<C-w>h", vim.keymapping.opts)
 vim.keymapping.smap("n", "<A-l>", "<C-w>l", vim.keymapping.opts)
+
+vim.keymapping.smap("n", "ggvG", "ggvG=", vim.keymapping.opts)

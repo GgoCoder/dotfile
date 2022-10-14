@@ -109,7 +109,7 @@ alias ll="ls -al"
 alias nf="neofetch"
 
 export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
-alias proxy='export http_proxy="10.182.34.111:10810";export all_proxy="10.182.34.111:10811";'
+alias proxy='export http_proxy="$hostip:10810";export all_proxy="$hostip:10811";'
 alias unproxy='unset http_proxy;unset https_proxy; unset all_proxy'
 alias cdlua='cd $HOME/luaWorkspace/'
 alias cdgo='cd $HOME/goWorkspace/'

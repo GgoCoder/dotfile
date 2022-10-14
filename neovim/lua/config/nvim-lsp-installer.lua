@@ -10,8 +10,19 @@ local function attach(_, buffer)
 	vim.keymapping.bsmap(buffer, "n", "gd", "<cmd>Telescope lsp_definitions theme=dropdown<CR>", vim.keymapping.opts)
 	--查找引用
 	vim.keymapping.bsmap(buffer, "n", "gr", "<cmd>Telescope lsp_references theme=dropdown<CR>", vim.keymapping.opts)
+
+
+
 	--显示代码可用的操作
-	vim.keymapping.bsmap(buffer, "n", "<leader>ca", "<cmd>Telescope lsp_code_actions theme=dropdown<CR>", vim.keymapping.opts)
+	vim.keymapping.bsmap(buffer, "n", "<leader>ca", "<cmd>Lspsaga code_action <CR>", vim.keymapping.opts)
+	vim.keymapping.bsmap(buffer, "v", "<leader>ca", "<cmd>Lspsaga code_action <CR>", vim.keymapping.opts)
+	-- go help
+	vim.keymapping.bsmap(buffer, "n", "gh", "<cmd>Lspsaga lsp_finder<CR>", vim.keymapping.opts)
+	vim.keymapping.bsmap(buffer, "n", "<leader>gr", "<cmd>Lspsaga rename<CR>", vim.keymapping.opts)
+	vim.keymapping.bsmap(buffer, "n", "K", "<cmd>Lspsaga hover_doc<CR>", vim.keymapping.opts)
+	--todo: 可以退出<Esc>gr 和 gh
+	vim.keymapping.smap("t", "<Esc>", "<cmd>q<CR>", vim.keymapping.opts)
+	-- vim.keymapping.smap("n", "<Esc>", "<cmd>q<CR>", vim.keymapping.opts)
 end
 
 for server_name, server_option in pairs(servers) do

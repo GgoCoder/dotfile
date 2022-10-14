@@ -86,4 +86,8 @@ return require("packer").startup(function(use)
 	-- 自动保存插件
 	use{"Pocco81/auto-save.nvim",
 	config = function() require("config.auto-save")end}
+
+	use{"glepnir/lspsaga.nvim",
+	branch = "main",
+	config = function ()require("config.lspsaga")end}
 end)
