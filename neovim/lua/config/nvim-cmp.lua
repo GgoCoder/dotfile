@@ -43,6 +43,7 @@ cmp.setup({
 	},
 	-- 补全相关的按键
 	mapping = {
+		['<Tab>'] = cmp.mapping.select_next_item(),
 		['<Up>'] = cmp.mapping.select_prev_item(),
 		["<Down>"] = cmp.mapping.select_next_item(),
 		["<CR>"] = cmp.mapping.confirm({select = true}),

@@ -61,7 +61,7 @@ return require("packer").startup(function(use)
 	-- bufferline
 	use {'akinsho/bufferline.nvim',
 	tag = "v2.*",
-	requires = 'kyazdani42/nvim-web-devicons',
+	requires = {'kyazdani42/nvim-web-devicons', "famiu/bufdelete.nvim"},
 	config = function() require("config.bufferline")end}
 
 	-- which-key
@@ -78,4 +78,12 @@ return require("packer").startup(function(use)
 	tag = "*",
 	config = function()require("config.toggleterm")end}
 
+	-- todo插件
+	use{"folke/todo-comments.nvim",
+	requires = "nvim-lua/plenary.nvim",
+	config = function() require("config.todo-comments")end}
+
+	-- 自动保存插件
+	use{"Pocco81/auto-save.nvim",
+	config = function() require("config.auto-save")end}
 end)
