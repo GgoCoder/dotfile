@@ -3,6 +3,11 @@ local lsp_installer_servers = require("nvim-lsp-installer.servers")
 local servers = {
 	sumneko_lua = require("lsp.sumneko_lua"),
 	gopls = require("lsp.gopls"),
+	bashls = require("lsp.bashls"),
+	jsonls = require("lsp.jsonls"),
+	yamlls = require("lsp.yamlls"),
+	cmake = require("lsp.cmake"),
+	marksman = require("lsp.marksman")
 }
 
 local function attach(_, buffer)
@@ -21,7 +26,7 @@ local function attach(_, buffer)
 	vim.keymapping.bsmap(buffer, "n", "<leader>gr", "<cmd>Lspsaga rename<CR>", vim.keymapping.opts)
 	vim.keymapping.bsmap(buffer, "n", "K", "<cmd>Lspsaga hover_doc<CR>", vim.keymapping.opts)
 	--todo: 可以退出<Esc>gr 和 gh
-	vim.keymapping.smap("t", "<Esc>", "<cmd>q<CR>", vim.keymapping.opts)
+	--vim.keymapping.smap("t", "<Esc>", "<cmd>q<CR>", vim.keymapping.opts)
 	-- vim.keymapping.smap("n", "<Esc>", "<cmd>q<CR>", vim.keymapping.opts)
 end
 

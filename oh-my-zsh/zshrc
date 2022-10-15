@@ -71,10 +71,12 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
+#INFO: 插件备注
 # git 显示当前目录的版本信息
 # z 快速到之前打开的目录
 # zsh-syntax-highlighting 对错误的命令标红
-plugins=(git z zsh-syntax-highlighting)
+# zsh-autosuggestions 自动粘贴使用过的命令
+plugins=(git z zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
