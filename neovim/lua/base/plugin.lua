@@ -97,12 +97,12 @@ return require("packer").startup(function(use)
 
 	--pdf 预览
 	-- install without yarn or npm
-	use({
+	use{
 		"iamcco/markdown-preview.nvim",
 		run = function() vim.fn["mkdp#util#install"]() end,
 		config = function()require("config.markdown-preview")end,
 		ft = {"markdown"}
-	})
-
-	-- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+	}
+	use{"liuchengxu/vista.vim",
+	config = function()require("config.vista-nvim")end}
 end)
