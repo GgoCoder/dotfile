@@ -23,7 +23,8 @@ vim.o.autoindent = true
 vim.o.ignorecase = true
 --搜索时有大写字母， 关闭大小写忽略
 vim.o.smartcase = true
-
+vim.o.scrolloff = 10
+vim.o.syntax = "enable"
 vim.keymapping = {
 	smap = vim.api.nvim_set_keymap,
 	dmap = vim.api.nvim_del_keymap,

@@ -5,8 +5,8 @@ vim.keymapping.smap("i", "jj", "<Esc>", vim.keymapping.opts)
 vim.keymapping.smap("v", "H", "^", vim.keymapping.opts)
 vim.keymapping.smap("v", "L", "$", vim.keymapping.opts)
 
-vim.keymapping.smap("n", "<C-u>", "10k", vim.keymapping.opts)
-vim.keymapping.smap("n", "<C-d>", "10j", vim.keymapping.opts)
+vim.keymapping.smap("n", "<C-u>", "15k", vim.keymapping.opts)
+vim.keymapping.smap("n", "<C-d>", "15j", vim.keymapping.opts)
 
 --插入模式的上下移动
 vim.keymapping.smap("i", "<A-k>", "<up>", vim.keymapping.opts)
@@ -26,4 +26,4 @@ vim.keymapping.smap("n", "<A-j>", "<C-w>j", vim.keymapping.opts)
 vim.keymapping.smap("n", "<A-h>", "<C-w>h", vim.keymapping.opts)
 vim.keymapping.smap("n", "<A-l>", "<C-w>l", vim.keymapping.opts)
 
-vim.keymapping.smap("n", "ggvG", "ggvG=", vim.keymapping.opts)
+vim.keymapping.smap("n", "gvG", "ggvG=", vim.keymapping.opts)

@@ -5,8 +5,10 @@ return require("packer").startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	--theme 主题
-	use {'navarasu/onedark.nvim',
-		config = function() require("config.onedark") end}
+	use {'navarasu/onedark.nvim'}
+	use { 'projekt0n/github-nvim-theme'}
+	use {"karoliskoncevicius/sacredforest-vim"}
+
 
 	-- 大纲树
 	use {'nvim-tree/nvim-tree.lua',
@@ -97,12 +99,13 @@ return require("packer").startup(function(use)
 
 	--pdf 预览
 	-- install without yarn or npm
-	use{
-		"iamcco/markdown-preview.nvim",
+	use{"iamcco/markdown-preview.nvim",
 		run = function() vim.fn["mkdp#util#install"]() end,
 		config = function()require("config.markdown-preview")end,
 		ft = {"markdown"}
 	}
+	--右侧大纲预览
 	use{"liuchengxu/vista.vim",
-	config = function()require("config.vista-nvim")end}
+		config = function()require("config.vista-nvim")end}
+
 end)
