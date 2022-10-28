@@ -45,14 +45,13 @@ local function get_random_theme()
 		count = count + 1
 	end
 	math.randomseed(os.time())
-	local a = math.random(count)
+	local a = math.random(count + 1)
 	local f = switch[a]
 	if(f) then
 		f()
 	else
-		load_one_dark_theme()
+		load_default_theme()
 	end
 end
-
 
 get_random_theme()

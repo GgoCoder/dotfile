@@ -9,5 +9,4 @@ else
     get_lsp_client = vim.lsp.buf_get_clients
 end
 
-get_lsp_client()
-
+print(get_lsp_client())
