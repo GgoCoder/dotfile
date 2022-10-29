@@ -14,6 +14,7 @@ ohmyzshInstall:
 .PHONY:
 tmuxInstall:
 	echo "tmux"
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 	tmux source-file ~/.tmux.conf
 
@@ -23,4 +24,5 @@ neovimInstall:
 
 .PHONY:
 dotfiles: ohmyzshInstall tmuxInstall neovimInstall
+
 
