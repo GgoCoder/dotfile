@@ -1,6 +1,6 @@
 -- https://github.com/navarasu/onedark.nvim
 
-local theme_array = {"onedark", "github_light_default", "sacredforest"}
+local theme_array = {"onedark", "github_dark", "github_dimmed"}
 
 local function load_default_theme()
 	vim.cmd.colorscheme("default")
@@ -16,15 +16,20 @@ local function load_one_dark_theme()
 	require("onedark").load()
 end
 
-local function load_github_light_theme()
+local function load_github_dark_theme()
 	load_default_theme()
-	vim.cmd.colorscheme("github_light_default")
+	require("github-theme").setup({
+		theme_style = "dark",
+		transparent = true
+	})
 end
 
-local function load_sacredforest_theme()
+local function load_github_dimmed_theme()
 	load_default_theme()
-	vim.cmd.colorscheme("sacredforest")
-	vim.o.termguicolors = true
+	require("github-theme").setup({
+		theme_style = "dimmed",
+		transparent = true
+	})
 end
 
 local switch = {
@@ -32,10 +37,10 @@ local switch = {
 		load_one_dark_theme()
 	end,
 	[2] = function ()
-		load_github_light_theme()
+		load_github_dark_theme()
 	end,
 	[3] = function ()
-		load_sacredforest_theme()
+		load_github_dimmed_theme()
 	end
 }
 
@@ -55,3 +60,4 @@ local function get_random_theme()
 end
 
 get_random_theme()
+--load_one_dark_theme()

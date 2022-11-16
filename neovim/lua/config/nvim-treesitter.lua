@@ -5,6 +5,7 @@ require'nvim-treesitter.configs'.setup {
 	-- 启用代码高亮功能
 	highlight = {
 		enable = true,
+		disable = {"lua"},
 		additional_vim_regex_highlighting = false
 	},
 	-- 启用增量选择
