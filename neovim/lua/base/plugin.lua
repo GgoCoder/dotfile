@@ -107,7 +107,4 @@ return require("packer").startup(function(use)
 	--右侧大纲预览
 	use{"liuchengxu/vista.vim",
 		config = function()require("config.vista-nvim")end}
-	-- 格式化 
-	use { 'mhartington/formatter.nvim',
-		config = function()require("config.formatter")end}
 end)
